@@ -1,0 +1,7 @@
+<div class="parent">
+  <h1>Hello {{$ctrl.name.firstName}}!</h1>
+  <h1 ng-if="$ctrl.idFromChild < 5">{{$ctrl.idFromChild}}</h1>
+  <input type="text" ng-model="$ctrl.name.firstName">
+  <input type="text" ng-model="$ctrl.name.lastName">
+  <child input-name="$ctrl.name" on-call-parent-callback="$ctrl.onCallParentCallback"></child>
+</div>

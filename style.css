@@ -1,0 +1,11 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+.parent {
+  outline: red;
+}
+.child {
+  outline: green;
+}
