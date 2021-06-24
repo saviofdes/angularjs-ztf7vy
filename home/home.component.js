@@ -17,7 +17,7 @@ function HomeController(homeService) {
 
 const HomeComponent = {
   controller: ['homeService', HomeController],
-  templateUrl: './home.html',
+  templateUrl: './home.template.html',
   bindings: {}
 };
 angular.module('homeApp').component('home', HomeComponent);
