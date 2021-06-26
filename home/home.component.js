@@ -4,10 +4,13 @@ function HomeController(homeService) {
     lastName: 'Component'
   };
   this.idFromChild = 0;
+  this.users = [];
 
   this.$onInit = function() {
     console.log(this.name);
-    homeService.fetchData();
+    homeService.fetchData().then(response => {
+      this.users = response.data;
+    });
   };
 
   this.onCallParentCallback = id => {
@@ -20,4 +23,4 @@ const HomeComponent = {
   templateUrl: './home.template.html',
   bindings: {}
 };
-angular.module('homeApp').component('home', HomeComponent);
+export { HomeComponent };

@@ -18,4 +18,4 @@ const ChildComponent = {
   }
 };
 
-angular.module('homeApp').component('child', ChildComponent);
+export { ChildComponent };

@@ -1,7 +1,7 @@
-function HomeService() {
+function HomeService($http) {
   this.fetchData = function() {
-    console.log('data fetched');
+    return $http.get('https://jsonplaceholder.typicode.com/users');
   };
 }
 
-angular.module('homeApp').service('homeService', HomeService);
+angular.module('homeApp').service('homeService', ['$http', HomeService]);
